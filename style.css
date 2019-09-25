@@ -1,0 +1,12 @@
+
+li.collection-item{
+    margin-bottom: 50px;
+}
+
+i.fa.fa-remove {
+    width: 100px;
+    background: green;
+    height: 40px;
+    float: right;
+    clear: both;
+}

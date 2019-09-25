@@ -1,3 +1,5 @@
+console.log('JS working');
+
 //Define the UI vars
 const form = document.querySelector('#task-form');
 const taskList = document.querySelector('.collection');
@@ -12,13 +14,19 @@ loadEventListeners();
 //Loading all event listeners
 function loadEventListeners(){
     //Add taks event
-    form.addEventListener('submit', addTask)
+    form.addEventListener('submit', addTask);
+    //Remove task event
+    taskList.addEventListener('click', removeTask);
+    //Clear Task Event
+    clearBtn.addEventListener('click', clearTasks);
+    //Filter tasks event
+    filter.addEventListener('keyup', filterTasks);
 }
 
 //Add Task
 function addTask(e) {
     if(taskInput.value === ''){
-        alert('add a task please')
+        alert('add a task please'); 
     }
 
     //Create li element
@@ -33,7 +41,43 @@ function addTask(e) {
     link.className = 'delete-item';
     //Add icon html
     link.innerHTML = '<i class="fa fa-remove"></li>';
+    //Append the link to the li
+    li.appendChild(link);
 
+    //Append li to the ul 
+    taskList.appendChild(li);
+    //console.log(li);
+
+    //Clear Input
+    taskInput.value = '';
 
    e.preventDefault(); 
+}
+
+//Remove Task
+function removeTask(e){
+    if(e.target.parentElement.classList.contains('delete-item')){
+        if(confirm('Are you sure? ')){
+            e.target.parentElement.parentElement.remove();
+        }
+    }
+}
+
+function clearTasks(e){
+     //One way of doing it could be
+     //taskList.innerHTML = '';
+     //It is just set to clear
+
+
+     //But we would rathe have it be done with a while loop:
+    while(taskList.firstChild){
+        taskList.removeChild(taskList.firstChild);
+    }
+}
+
+
+//Filter Tasks
+function filterTasks(e){
+    const text = e.target.value.toLowerCase();
+
 }
