@@ -1,12 +1,15 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>JavaScript Task List</title>
 </head>
+
 <body>
-    
+
     <header>
         <h1>JavaScript Task List</h1>
         <em>Remeber to do all your tasks!</em>
@@ -16,11 +19,28 @@
 
         <form id="task-form">
             <input type="text" name="task" id="task">
-                <label for="task">Add A New Task</label>
-            <submit type="submit" value="Add Task"></submit>    
+            <label for="task">Add A New Task</label>
+            <submit type="submit" value="Add Task">Add Your Task!</submit>
         </form>
 
     </section>
 
+    <section class="tasks">
+        <h4>Filter Your Tasks</h4>
+        <input type="text" name="filter" id="filter">
+        <label for="filter">Filter Tasks</label>
+
+
+        <ul class="collection">
+               <Li>
+                   Item
+               </Li> 
+        </ul>
+        <a href="#" class="clear-tasks">Clear Tasks</a>
+
+
+    </section>
+    <script src="app.js" type="text/JavaScript"></script>
 </body>
+
 </html>
