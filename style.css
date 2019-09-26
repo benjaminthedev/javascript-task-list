@@ -11,8 +11,9 @@ h1, h2, h3, h4, h5{
     font-weight: 700;
     letter-spacing: 1px;
 }
-em{
+.text-center{
     font-size: 22px;
+    text-align:text-center;
 }
 
 
@@ -21,12 +22,12 @@ em{
 section.main{
     margin: 10px 0;
     display: flex;
-    
+    flex-direction: column;
 }
 
 section.main form#task-form{
     width: 100%;
-    flex-direction: column;
+   
 }
 
 
