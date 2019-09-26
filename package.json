@@ -1,0 +1,22 @@
+{
+  "name": "javascript-task-list",
+  "version": "1.0.0",
+  "description": "This is a small JavaScript Task List Application",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminthedev/javascript-task-list.git"
+  },
+  "author": "BenjaminTheDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benjaminthedev/javascript-task-list/issues"
+  },
+  "homepage": "https://github.com/benjaminthedev/javascript-task-list#readme",
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}
